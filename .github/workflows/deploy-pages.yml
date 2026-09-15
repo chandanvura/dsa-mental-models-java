@@ -33,7 +33,7 @@ jobs:
           else
             echo "NEXT_PUBLIC_BASE_PATH=/$repository_name" >> "$GITHUB_ENV"
           fi
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install --no-frozen-lockfile
       - run: pnpm build:pages
       - uses: actions/configure-pages@v5
         with:
